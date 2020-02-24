@@ -5345,7 +5345,9 @@ input[type=submit].btn-block {
 .card-img,
 .card-img-top {
     border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px)
+    border-top-right-radius: calc(.25rem - 1px);
+    width: auto;
+    height: 253px !important;
 }
 
 .card-img,
@@ -13348,7 +13350,7 @@ a.text-dark:hover {
     height: auto;
     background-color: #fff;
     border: 50%;
-    opacity: .9;
+    opacity: .8;
 }
 
 .img-viewdes:hover {

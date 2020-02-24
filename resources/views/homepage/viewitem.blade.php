@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="carousel" data-items="1">
-                        <img src="{!!asset('storage/shop/img/'.$item->images)!!}" alt="{{$item->nama_item}}">
+                        <img src="{!!asset('storage/shop/img/'.$item->images)!!}" alt="{{$item->nama_item}}"
+                            style="max-width: 400px;height: auto;">
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -22,10 +23,10 @@
                             <i class="fa fa-star-half-o"></i>
                         </div><br>
                         <p>Tersedia di:
-                            <a href="#"><img
+                            <a href="{{$item->tokopedia_link}}" target="_blank"><img
                                     src="https://res.cloudinary.com/shui-interior-com/image/upload/v1582532985/img/tokopedia_vfkosi.png"
                                     alt="" class="img-viewdes"></a>
-                            <a href="#"><img
+                            <a href="{{$item->shopee_link}}" target="_blank"><img
                                     src="https://res.cloudinary.com/shui-interior-com/image/upload/v1582532984/img/shopee_ikumyj.png"
                                     alt="" class="img-viewdes"></a>
                         </p>

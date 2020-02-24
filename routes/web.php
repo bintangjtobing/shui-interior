@@ -48,6 +48,8 @@ Route::group(['middleware' => 'auth'], function () {
     // VIEW EDIT FORM
     Route::get('/update-kategori/{id}', 'dashboardController@updatekategori');
     Route::get('/delete-kategori/{id}', 'dashboardController@deletekategori');
+    Route::get('/update-kategori-produk/{produk_id}', 'dashboardController@updatekategoriproduk');
+    Route::get('/delete-kategori-produk/{produk_id}', 'dashboardController@deletekategoriproduk');
     Route::get('/update-item/{id}', 'dashboardController@updateitem');
     Route::get('/delete-item/{id}', 'dashboardController@deleteitem');
     Route::get('/update-user/{id}', 'dashboardController@updateuser');

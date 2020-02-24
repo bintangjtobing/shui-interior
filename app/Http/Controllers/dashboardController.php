@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\CategoriesModel;
 use App\itemModel;
 use App\User;
+use App\produkDB;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -201,7 +202,11 @@ class dashboardController extends Controller
         $kategori = DB::table('categoriesSparepart')
             ->select('categoriesSparepart.*')
             ->get();
-        return view('dashboard.edititem', ['item' => $item, 'itemkategori' => $itemkategori, 'kategori' => $kategori]);
+        $kategoriProduk = DB::table('produk')
+            ->select('produk.*')
+            ->orderBy('produk.created_at', 'DESC')
+            ->get();
+        return view('dashboard.edititem', ['item' => $item, 'itemkategori' => $itemkategori, 'kategori' => $kategori, 'kategoriProduk' => $kategoriProduk]);
     }
     public function prosesupdateitem(Request $request, $itemId)
     {
@@ -211,6 +216,8 @@ class dashboardController extends Controller
         $item->description = $request->description;
         $item->type_product = $request->type_product;
         $item->updated_by = Auth()->user()->name;
+        $item->tokopedia_link = $request->tokopedia_link;
+        $item->shopee_link = $request->shopee_link;
         if ($request->hasFile('images')) {
             $request->file('images')->move('storage/shop/img/', $request->file('images')->getClientOriginalName());
             $item->images = $request->file('images')->getClientOriginalName();
@@ -266,6 +273,22 @@ class dashboardController extends Controller
                 DB::statement('ALTER TABLE users AUTO_INCREMENT = ' . (count(User::all()) + 1) . ';');
 
                 return back()->with('suser', 'Data pengguna berhasil dihapus dari database.');
+            }
+        }
+    }
+    public function updatekategoriproduk($produk_id)
+    {
+    }
+    public function deletekategoriproduk($produk_id)
+    {
+        $data_kategori = produkDB::find($produk_id);
+
+        if ($data_kategori) {
+            if ($data_kategori->delete()) {
+
+                DB::statement('ALTER TABLE produk AUTO_INCREMENT = ' . (count(produkDB::all()) + 1) . ';');
+
+                return back()->with('sukses', 'Kategori Produk berhasil dihapus!');
             }
         }
     }

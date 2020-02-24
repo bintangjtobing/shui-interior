@@ -16,12 +16,9 @@
                 <div class="form-group col-md-3">
                     <label for="">Jenis produk</label>
                     <select name="type_product" class="custom-select" id="">
-                        <option value="
-                        @if($item->type_product=='Hydraulic Dump Truck') Hydraulic Dump Truck
-                            @elseif($item->type_product=='Sparepart Truck') Sparepart Truck  @else Lain Lain @endif">
-                            @if($item->type_product=='Hydraulic Dump Truck') Hydraulic Dump Truck
-                            @elseif($item->type_product=='Sparepart Truck') Sparepart Truck @else Lain Lain @endif
-                        </option>
+                        @foreach ($kategoriProduk as $itemProduk)
+                        <option value="{{$itemProduk->produk_id}}">{{$itemProduk->nama_produk}}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="form-group col-md-3">
@@ -34,6 +31,16 @@
                         <option value="{{$kategoriitem->id}}">{{$kategoriitem->nama_kategori}}</option>
                         @endforeach
                     </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="">Link tokopedia</label>
+                    <input type="url" name="tokopedia_link" class="form-control" value="{{$item->tokopedia_link}}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Link Shopee</label>
+                    <input type="url" name="shopee_link" class="form-control" value="{{$item->shopee_link}}" id="">
                 </div>
             </div>
             <div class="form-group">

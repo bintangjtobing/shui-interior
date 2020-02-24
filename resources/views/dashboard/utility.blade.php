@@ -85,8 +85,9 @@
                     <td>{{$kategori_item->nama_produk}}
                     </td>
                     <td>{!!$kategori_item->deskripsi!!}</td>
-                    <td><a href="/delete-kategori/{{$kategori_item->produk_id}}" class="btn btn-danger btn-sm"><i
-                                class="fas fa-trash"></i></a> <a href="/update-kategori/{{$kategori_item->produk_id}}"
+                    <td><a href="/delete-kategori-produk/{{$kategori_item->produk_id}}" class="btn btn-danger btn-sm"><i
+                                class="fas fa-trash"></i></a> <a
+                            href="/update-kategori-produk/{{$kategori_item->produk_id}}"
                             class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a></td>
                 </tr>
                 @endforeach
@@ -265,13 +266,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group" style="color: #000 !important">
                                         <label for="">Tokopedia shared link</label>
-                                        <input type="url" class="form-control" name="tokopedia" id="">
+                                        <input type="url" class="form-control" name="tokopedia_link" id="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group" style="color: #000 !important">
                                         <label for="">Shopee shared link</label>
-                                        <input type="url" class="form-control" name="shopee" id="">
+                                        <input type="url" class="form-control" name="shopee_link" id="">
                                     </div>
                                 </div>
                             </div>
