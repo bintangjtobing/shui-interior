@@ -1,7 +1,8 @@
 @extends('homepage.extends')
 @section('title','| Beranda')
-@section('keywords','sumber diesel, sumber parts, supplier sparepart truck, sparepart truck, truck, sparepart')
-@section('desc','Sumberparts.com adalah website toko dari toko CV. Sumber Diesel.')
+@section('keywords','shuiinterior,shui-interior, shui interior medan, wallpaper medan, roller blinds medan')
+@section('desc','Shui Interior merupakan toko yang menjual beraneka kebutuhan interior rumah kamu. Termasuk wallpaper,
+kasa nyamuk, blinds dan lain sebagainya.')
 @section('menu')
 <li class="dropdown"><a href="#">Produk kami</a>
     <ul class="dropdown-menu">

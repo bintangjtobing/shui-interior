@@ -23,7 +23,31 @@
 </head>
 
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v6.0'
+            });
+        };
 
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/id_ID/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="104925591111733" theme_color="#d6af42"
+        logged_in_greeting="Halo.  Ada yang bisa kami bantu?" logged_out_greeting="Halo.  Ada yang bisa kami bantu?">
+    </div>
     <div class="body-inner">
         <div id="topbar" class="d-none d-xl-block d-lg-block">
             <div class="container">
@@ -37,7 +61,7 @@
                     <div class="col-md-4 d-none d-sm-block">
                         <div class="social-icons social-icons-colored-hover">
                             <ul>
-                                <li class="social-facebook"><a href="https://facebook.com/"><i
+                                <li class="social-facebook"><a href="https://facebook.com/shuiinteriormedan"><i
                                             class="fab fa-facebook-f"></i></a></li>
                                 <li class="social-instagram"><a href="https://instagram.com/"><i
                                             class="fab fa-instagram"></i></a></li>

@@ -1,7 +1,8 @@
 @extends('homepage.extends')
 @section('title','| Penawaran produk')
-@section('keywords','hydraulic dump truck','sparepart truck','hydraulic')
-@section('desc','Mau mendapatkan produk dari sumberparts.com')
+@section('keywords','shuiinterior,shui-interior, shui interior medan, wallpaper medan, roller blinds medan')
+@section('desc','Shui Interior merupakan toko yang menjual beraneka kebutuhan interior rumah kamu. Termasuk wallpaper,
+kasa nyamuk, blinds dan lain sebagainya.')
 @section('menu')
 <li class="dropdown"><a href="#">Produk kami</a>
     <ul class="dropdown-menu">
