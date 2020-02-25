@@ -59,6 +59,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/proses-kategori/{id}', 'dashboardController@prosesupdatekategori');
     Route::post('/proses-item/{itemId}', 'dashboardController@prosesupdateitem');
     Route::post('/proses-user/{id}', 'dashboardController@prosesuser');
+    Route::post('/proses-kategori-produk/{produk_id}', 'dashboardController@proseskategoriproduk');
 
     Route::get('/help-support', 'dashboardController@help');
     Route::post('/request-support', 'dashboardController@requestsupport');

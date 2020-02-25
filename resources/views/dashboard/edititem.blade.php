@@ -45,7 +45,7 @@
             </div>
             <div class="form-group">
                 <label for="description">Deskripsi produk</label>
-                <textarea name="description" class="form-control" cols="30" rows="5">{{$item->description}}</textarea>
+                <textarea name="description" class="form-control" cols="30" rows="5">{!!$item->description!!}</textarea>
             </div>
             <div class="form-group">
                 <label for="">Update gambar utama produk</label>

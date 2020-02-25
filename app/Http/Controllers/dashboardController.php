@@ -278,6 +278,22 @@ class dashboardController extends Controller
     }
     public function updatekategoriproduk($produk_id)
     {
+        $katproduk = produkDB::find($produk_id);
+        return view('dashboard.editkatproduk', ['katproduk' => $katproduk]);
+    }
+    public function proseskategoriproduk(Request $request, $produk_id)
+    {
+        $kategori = \App\produkDB::find($produk_id);
+        $kategori->nama_produk  = $request->nama_produk;
+        $kategori->deskripsi = $request->deskripsi;
+        if ($request->hasFile('images')) {
+            $request->file('images')->move('storage/kategoriProduk/img/', $request->file('images')->getClientOriginalName());
+            $kategori->image = $request->file('images')->getClientOriginalName();
+            // dd($kategori);
+        }
+        $kategori->save();
+
+        return redirect('/utility-item')->with('sukseskatproduk', 'Berhasil mengubah data kategori produk');
     }
     public function deletekategoriproduk($produk_id)
     {

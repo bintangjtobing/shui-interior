@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Login Tools SMJ</title>
+    <title>Login Administrator Shui Interior</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -91,7 +91,7 @@
                 {{-- MODAL DAFTAR AKUN --}}
                 <div class="modal fade" id="daftarakun" tabindex="-1" role="dialog" aria-labelledby="daftarakun"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLongTitle">Registrasi akun</h5>
@@ -106,21 +106,21 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="">Nama lengkap</label>
-                                            <input type="text" name="name" class="form-control">
+                                            <input type="text" name="name" class="form-control" required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="">Email</label>
-                                            <input type="email" name="email" class="form-control">
+                                            <input type="email" name="email" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="">Username</label>
-                                            <input type="text" name="username" id="" class="form-control">
+                                            <input type="text" name="username" id="" class="form-control" required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="">Password</label>
-                                            <input type="password" name="password" id="" class="form-control">
+                                            <input type="password" name="password" id="" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
