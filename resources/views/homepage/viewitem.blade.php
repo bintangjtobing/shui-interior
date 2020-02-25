@@ -22,14 +22,12 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-half-o"></i>
                         </div><br>
-                        <p>Tersedia di:
-                            <a href="{{$item->tokopedia_link}}" target="_blank"><img
+                        <p>Tersedia di: <a href="{{$item->tokopedia_link}}" target="_blank"><img
                                     src="https://res.cloudinary.com/shui-interior-com/image/upload/v1582532985/img/tokopedia_vfkosi.png"
-                                    alt="" class="img-viewdes"></a>
-                            <a href="{{$item->shopee_link}}" target="_blank"><img
+                                    alt="" class="img-viewdes"></a> <a href="{{$item->shopee_link}}"
+                                target="_blank"><img
                                     src="https://res.cloudinary.com/shui-interior-com/image/upload/v1582532984/img/shopee_ikumyj.png"
-                                    alt="" class="img-viewdes"></a>
-                        </p>
+                                    alt="" class="img-viewdes"></a></p>
                         <div class="seperator m-b-10"></div>
                         <p>{!!$item->description!!}</p>
                         <div class="seperator m-t-20 m-b-10"></div>
