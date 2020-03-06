@@ -5,7 +5,7 @@
     <div class="card-header">
         <h3 class="card-title">Data {{$katproduk->produk_id}} | {{$katproduk->nama_produk}}</h3>
     </div>
-    <form action="/proses-kategori-produk/{{$katproduk->produk_id}}" method="POST">
+    <form action="/proses-kategori-produk/{{$katproduk->produk_id}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="card-body">
             <div class="form-group col-md-12">

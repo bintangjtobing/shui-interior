@@ -1,5 +1,7 @@
 @extends('homepage.extends')
-@section('title','| Produk Hydraulic Dump Truck')
+@foreach ($kategoriProduk as $item)
+@section('title','Produk '.$item->nama_produk)
+@endforeach
 @section('keywords','shuiinterior,shui-interior, shui interior medan, wallpaper medan, roller blinds medan')
 @section('desc','Shui Interior merupakan toko yang menjual beraneka kebutuhan interior rumah kamu. Termasuk wallpaper,
 kasa nyamuk, blinds dan lain sebagainya.')
