@@ -55,6 +55,7 @@
                     <div class="col-md-8">
                         <ul class="top-menu">
                             <li><a href="tel:085370359971">Phone: +62 853 7373 0023</a></li>
+                            <li><a href="tel:082176018371">Phone: +62 821 7601 8371</a></li>
                             <li><a href="mailto:info@shui-interior.com">Email: info@shui-interior.com</a></li>
                         </ul>
                     </div>
@@ -118,7 +119,8 @@
                                 <p>Jl. Mustafa No. 80B<br>
                                     Pulo Brayan Darat I Kec.Medan Timur<br>
                                     Kota Medan, Sumatera Utara, 20239<br>
-                                    <i class="fas fa-phone"></i> +62 853 7373 0023</p>
+                                    <i class="fas fa-phone"></i> +62 853 7373 0023<br>
+                                    <i class="fas fa-phone"></i> +62 821 7601 8371</p>
                             </div>
 
                         </div>
